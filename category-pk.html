@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Thể loại</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body> 
+<header>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light cus-topbar container-fluid row">
+      <div class="col-2">
+          <a class="navbar-brand" href="index.html">NELLY</a>
+      </div>
+      <div class="col-2">
+          <div class="search-local" style="width: 500px;">
+              <img src="./assets/img/icon/local.png" alt="">
+              <p>Tìm kiếm cửa hàng</p>
+          </div>
+      </div>
+      <div class="col-4 has-search" style="position: relative;">
+          <input class="input-search form-control" type="text" placeholder="Tìm kiếm quần, áo, phụ kiện,.... ">
+          <img style="position: absolute; top: 8px; right: 22px;" src="./assets/img/icon/glass.png" alt="">
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2">
+                <div class="collapse navbar-collapse" id="collapsibleNavId" style="justify-content: flex-end">
+                    <ul class="nav">
+                        <li><a href="account.html" title="Tài khoản"><img src="./assets/img/icon/user.png" alt=""></li></a>
+                        <li><a href="#"><img src="./assets/img/icon/heart.png" alt=""></li></a>
+                        <li><a href="cart.html" title="Giỏ hàng"><img id="dropdownCart" src="./assets/img/icon/cart.png" alt=""></li></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- demo cart -->
+            <div class="img-header" style="position:absolute; top: 80px; right: 0px;">
+            <div id="cart">
+                <div class="cart-div">
+                    <div class="popup-cart">
+                        <div class="">
+                            <div class="item-product">
+                                <a href="product-detail-a1.html"><img src="./assets/img/detail/detail-a12.png"alt=""></a>
+                                <a href="product-detail-a1.html"><h5>Áo Phông Trơn...</h5></a>
+                                <p><b>1</b> x 600.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                            <div class="item-product">
+                                <a href="product-detail-a1.html"><img src="./assets/img/detail/detail-a21.png"alt=""></a>
+                                <a href="product-detail-a1.html"><h5>Áo Phông In Họ...</h5></a>
+                                <p><b>1</b> x 600.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                            <div class="item-product">
+                                <a href="product-detail-pk1.html"><img src="./assets/img/detail/detail-pk1.png"alt=""></a>
+                                <a href="product-detail-pk1.html"><h5>Giày Phong Các...</h5></a>
+                                <p><b>1</b> x 600.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                        </div>
+                        <div class="subtotal">
+                            <h5>Tổng:</h5>
+                            <p>1.800.000 VNĐ</p>
+                        </div>
+                        <div class="btn-viewcart">
+                            <a href="cart.html"><button>Xem giỏ hàng</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- end demo cart -->
+  </nav>
+        <nav class="navbar navbar-expand navbar-light bg-light cus-mainbar container-cust">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#sale">Sale <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-new">Hàng mới về</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Áo <img src="./assets/img/icon/down-arrow.svg"/></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="category-a.html">Áo Khoác</a>
+                        <a class="dropdown-item" href="category-a.html">Áo Phông</a>
+                        <a class="dropdown-item" href="category-a.html">Áo Nỉ & Hoodie</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quần <img src="./assets/img/icon/down-arrow.svg"/></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="category.html">Quần Dài</a>
+                        <a class="dropdown-item" href="category.html">Quần Shorts</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phụ kiện <img src="./assets/img/icon/down-arrow.svg"/></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="category-pk.html">Giày</a>
+                        <a class="dropdown-item" href="category-pk.html">Mũ</a>
+                        <a class="dropdown-item" href="category-pk.html">Túi</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="gallery.html">Bộ sưu tập<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </nav>
+</header>
+  <div class="container-cust" style="margin-top: 50px">
+    <div class="link-header">Trang Chủ >></div>
+    <div class="row cus-row">
+      <div class="col cus-col" style="width: 190px;">
+        <div class="header-category">Danh mục</div>
+        <div class="list-category">
+          <ul>
+            <li><a href="category-a.html">Áo</a></li>
+            <li><a href="category-a.html">Áo phông</a></li>
+            <li><a href="category-a.html">Áo khoác</a></li>
+            <li><a href="category-a.html">Áo nỉ & hoodie</a></li>
+            <li><a href="category.html">Quần</a></li>
+            <li><a href="category.html">Quần jeans</a></li>
+            <li><a href="category.html">Quần dài</a></li>
+            <li><a href="category.html">Quần shorts</a></li>
+            <li><a href="category-pk.html">Phụ kiện</a></li>
+            <li><a href="category-pk.html">Giày</a></li>
+            <li><a href="category-pk.html">Mũ</a></li>
+            <li><a href="category-pk.html">Túi</a></li>
+          </ul>
+        </div>
+        <div class="header-category">Màu sắc</div>
+        <div class="list-box">
+          <div class="row-box-color">
+            <div class="box-color" style="background: #797F8C;"></div>
+            <div class="box-color" style="background: #00010D;"></div>
+          </div>
+          <div class="row-box-color">
+            <div class="box-color" style="background: #DDDCC5;"></div>
+            <div class="box-color" style="background: #847967;"></div>
+          </div>
+          <div class="row-box-color">
+            <div class="box-color" style="background: #075BCC;"></div>
+            <div class="box-color" style="background: #27AE60;"></div>
+          </div>
+          <div class="row-box-color">
+            <div class="box-color" style="background: #F2C94C;"></div>
+            <div class="box-color" style="background: #9B51E0;"></div>
+          </div>
+        </div>
+        <div class="header-category">Kích cỡ</div>
+        <div class="list-box">
+          <div class="row-checkbox-size">
+            <input class="checkbox-custom" id="gridCheck1" name="checkbox-1" type="checkbox" required="" checked>
+            <label for="gridCheck1" class="checkbox-custom-label form-check-label" id="lbCheck">XS</label>
+          </div>
+          <div class="row-checkbox-size">
+            <input class="checkbox-custom" id="gridCheck2" name="checkbox-1" type="checkbox" required="">
+            <label for="gridCheck2" class="checkbox-custom-label form-check-label" id="lbCheck">S</label>
+          </div>
+          <div class="row-checkbox-size">
+            <input class="checkbox-custom" id="gridCheck3" name="checkbox-1" type="checkbox" required="">
+            <label for="gridCheck3" class="checkbox-custom-label form-check-label" id="lbCheck">M</label>
+          </div>
+          <div class="row-checkbox-size">
+            <input class="checkbox-custom" id="gridCheck4" name="checkbox-1" type="checkbox" required="">
+            <label for="gridCheck4" class="checkbox-custom-label form-check-label" id="lbCheck">L</label>
+          </div>
+          <div class="row-checkbox-size">
+            <input class="checkbox-custom" id="gridCheck5" name="checkbox-1" type="checkbox" required="">
+            <label for="gridCheck5" class="checkbox-custom-label form-check-label" id="lbCheck">XL</label>
+          </div>
+        </div>
+      </div>
+      <div class="col cus-col" style="width: 1390px;">
+        <div class="grid-product">
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk3.html">
+                <img src="./assets/img/Homepage/san-pham/9065434800_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk3.html">Mũ Bucket Có Họa Tiết Dán</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk1.html">
+                <img src="./assets/img/Homepage/san-pham/2212521001_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk1.html">Giày Phong Cách Chunky S</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk2.html">
+                <img src="./assets/img/Homepage/san-pham/3275520040_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk2.html">Ba Lô Đa Năng Mềm Màu Đen</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-product">
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk3.html">
+                <img src="./assets/img/Homepage/san-pham/9065434800_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk3.html">Mũ Bucket Có Họa Tiết Dán</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk1.html">
+                <img src="./assets/img/Homepage/san-pham/2212521001_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk1.html">Giày Phong Cách Chunky S</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk2.html">
+                <img src="./assets/img/Homepage/san-pham/3275520040_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk2.html">Ba Lô Đa Năng Mềm Màu Đen</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-product">
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk3.html">
+                <img src="./assets/img/Homepage/san-pham/9065434800_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk3.html">Mũ Bucket Có Họa Tiết Dán</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk1.html">
+                <img src="./assets/img/Homepage/san-pham/2212521001_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk1.html">Giày Phong Cách Chunky S</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+          <div class="grid-item-product">
+            <div class="card-product">
+              <a href="product-detail-pk2.html">
+                <img src="./assets/img/Homepage/san-pham/3275520040_1_1_1.jpg" alt="Snow" style="width:100%; height: 650px;">
+              </a>
+              <div class="add-to-cart">
+                <div class="icon-cart">
+                  <i class="far fa-heart" style="font-size: 24px;"></i>
+                </div>
+                <div class="text-cart" onclick="createAlert('',' Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">ADD TO BAG</div>
+              </div>
+            </div>
+            <div class="card-product-name"><a href="product-detail-pk2.html">Ba Lô Đa Năng Mềm Màu Đen</a></div>
+            <div class="card-product-price">600.000đ</div>
+            <div class="card-product-color">
+              <div class="color-circle" style="background: #F5F5DC;"></div>
+              <div class="color-circle" style="background: #343434;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cus-pagination">
+          <ul id="pagiGroup">
+            <li class="next-pagi"><img src="./assets/img/icon/left-arrow.svg" alt=""></li>
+            <li class="pagi-btn active-pagi">1</li>
+            <li class="pagi-btn">2</li>
+            <li class="pagi-btn">3</li>
+            <li class="pagi-btn">4</li>
+            <li class="pagi-btn">5</li>
+            <li class="pre-pagi"><img src="./assets/img/icon/right-arrow.svg" alt=""></li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pageMessages"></div>
+  <footer>
+    <div class="cus-footer">
+        <div class="footer-top">
+            <div class="grid-container container-cust">
+                <div class="grid-item">
+                    <h5>NELLY</h5>
+                    <p>Áo</p>
+                    <p>Quần</p>
+                    <p>Phụ kiện</p>
+                    <p>Bộ sưu tập</p>
+                    <p>Sản phẩm nổi bật</p>
+                </div>
+                <div class="grid-item">
+                    <h5>About NELLY</h5>
+                    <p>Về chúng tôi</p>
+                    <p>Chính sách đổi trả</p>
+                    <p>Hệ thống cửa hàng</p>
+                    <p>Tips & Tricks</p>
+                </div>
+                <div class="grid-item" style="border-right: 1px solid;">
+                    <h5>More from NELLY</h5>
+                    <h6>Mobile and NELLY Apps</h6>
+                    <h6>NELLY Marketplace</h6>
+                    <h6>Gift vouchers</h6>
+                </div>
+                <div class="grid-item grid-item1">
+                    <div class="" style="display: inline-block; margin-left: 80px;">
+                        <h6>THAM GIA BẢN TIN CỦA CHÚNG TÔI</h6>
+                        <div class="input-group mb-3">
+                            <input style="height: 32px;" type="text" class="form-control" placeholder="Nhập địa chỉ email của bạn" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" style="width: 124px; font-size: 14px; height: 32px;" type="button">Đăng kí</button>
+                            </div>
+                          </div>
+                    </div>
+                      <ul class="nav" style="padding-top: 24px; padding-left: 90px;">
+                        <li><img src="./assets/img/icon/facebook.png" alt=""></li>
+                        <li><img src="./assets/img/icon/instagram.png" alt=""></li>
+                        <li><img src="./assets/img/icon/twitter.png" alt=""></li>
+                        <li><img src="./assets/img/icon/socal1.png" alt=""></li>
+                        <li><img src="./assets/img/icon/paypal.png" alt=""></li>
+                        <li><img src="./assets/img/icon/circle.png" alt=""></li>
+                        <li><img src="./assets/img/icon/visa.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="container-cust">
+                <h5 style="padding-left: 10px;">© NELLY 2019</h5>
+                <div class="f-right">
+                    <h5>Privacy & Cookies</h5>
+                    <h5 style="padding-left: 26px">Ts & Cs</h5>
+                    <h5 style="padding-left: 60px">Accessibility</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/notifiy.js"></script>
+  <script>
+    var header = document.getElementById("pagiGroup");
+    var btns = header.getElementsByClassName("pagi-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active-pagi");
+      current[0].className = current[0].className.replace(" active-pagi", "");
+      this.className += " active-pagi";
+      });
+    }
+  </script>
+</body>
+
+</html>

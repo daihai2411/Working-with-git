@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Thanh toán</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<link rel="stylesheet" href="./assets/lib/OwlCarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="./assets/lib/OwlCarousel/dist/assets/owl.theme.default.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<style>
+	.stepwizard-row p {
+		padding-left: 10px;
+		padding-top: 4px;
+	}
+
+	.stepwizard-row {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 11px;
+	}
+
+	.stepwizard {
+		width: 1106px;
+		position: relative;
+		border: 1px solid #00010D;
+		box-sizing: border-box;
+		border-radius: 5px 5px 0px 0px;
+		height: 55px;
+		margin-bottom: 34px;
+	}
+
+	.stepwizard-step button[disabled] {
+		opacity: 1 !important;
+		filter: alpha(opacity=100) !important;
+	}
+
+	.stepwizard-row:before {
+		top: 14px;
+		bottom: 0;
+		position: absolute;
+		content: " ";
+		width: 100%;
+		height: 0px;
+		background-color: #ccc;
+		z-order: 0;
+	}
+
+	.stepwizard-step {
+		display: flex;
+		text-align: center;
+		position: relative;
+	}
+
+	.stepwizard-step .btn-primary {
+		background-color: #000000;
+		color: #fefefe;
+	}
+
+	.stepwizard-step a {
+		border: 1px solid;
+	}
+
+	.btn-circle {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		padding: 6px 0;
+		font-size: 12px;
+		line-height: 1.428571429;
+		border-radius: 15px;
+	}
+</style>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light cus-topbar container-fluid row">
+			<div class="col-2">
+				<a class="navbar-brand" href="index.html">NELLY</a>
+			</div>
+			<div class="col-2">
+				<div class="search-local" style="width: 500px;">
+					<img src="./assets/img/icon/local.png" alt="">
+					<p>Tìm kiếm cửa hàng</p>
+				</div>
+			</div>
+			<div class="col-4 has-search" style="position: relative;">
+				<input class="input-search form-control" type="text" placeholder="Tìm kiếm quần, áo, phụ kiện,.... ">
+				<img style="position: absolute; top: 8px; right: 22px;" src="./assets/img/icon/glass.png" alt="">
+			</div>
+			<div class="col-2"></div>
+			<div class="col-2">
+				<div class="collapse navbar-collapse" id="collapsibleNavId" style="justify-content: flex-end">
+					<ul class="nav">
+						<li><a href="account.html" title="Tài khoản"><img src="./assets/img/icon/user.png" alt=""></li>
+						</a>
+						<li><a href="#"><img src="./assets/img/icon/heart.png" alt=""></li></a>
+						<li><a href="cart.html" title="Giỏ hàng"><img id="dropdownCart" src="./assets/img/icon/cart.png"
+									alt=""></li></a>
+					</ul>
+				</div>
+			</div>
+			<!-- demo cart -->
+			<div class="img-header" style="position:absolute; top: 80px; right: 0px;">
+				<div id="cart">
+					<div class="cart-div">
+						<div class="popup-cart">
+							<div class="">
+								<div class="item-product">
+									<a href="product-detail-a1.html"><img src="./assets/img/detail/detail-a12.png"
+											alt=""></a>
+									<a href="product-detail-a1.html">
+										<h5>Áo Phông Trơn...</h5>
+									</a>
+									<p><b>1</b> x 600.000 VNĐ</p>
+									<i class="material-icons md-14">close</i>
+								</div>
+								<hr style="margin-top: 10px; margin-bottom: 10px;" />
+								<div class="item-product">
+									<a href="product-detail-a1.html"><img src="./assets/img/detail/detail-a21.png"
+											alt=""></a>
+									<a href="product-detail-a1.html">
+										<h5>Áo Phông In Họ...</h5>
+									</a>
+									<p><b>1</b> x 600.000 VNĐ</p>
+									<i class="material-icons md-14">close</i>
+								</div>
+								<hr style="margin-top: 10px; margin-bottom: 10px;" />
+								<div class="item-product">
+									<a href="product-detail-pk1.html"><img src="./assets/img/detail/detail-pk1.png"
+											alt=""></a>
+									<a href="product-detail-pk1.html">
+										<h5>Giày Phong Các...</h5>
+									</a>
+									<p><b>1</b> x 600.000 VNĐ</p>
+									<i class="material-icons md-14">close</i>
+								</div>
+								<hr style="margin-top: 10px; margin-bottom: 10px;" />
+							</div>
+							<div class="subtotal">
+								<h5>Tổng:</h5>
+								<p>1.800.000 VNĐ</p>
+							</div>
+							<div class="btn-viewcart">
+								<a href="cart.html"><button>Xem giỏ hàng</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end demo cart -->
+		</nav>
+		<nav class="navbar navbar-expand navbar-light bg-light cus-mainbar container-cust">
+			<ul class="nav navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#sale">Sale <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#product-new">Hàng mới về</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Áo <img src="./assets/img/icon/down-arrow.svg" /></a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="category-a.html">Áo Khoác</a>
+						<a class="dropdown-item" href="category-a.html">Áo Phông</a>
+						<a class="dropdown-item" href="category-a.html">Áo Nỉ & Hoodie</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Quần <img
+							src="./assets/img/icon/down-arrow.svg" /></a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="category.html">Quần Dài</a>
+						<a class="dropdown-item" href="category.html">Quần Shorts</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Phụ kiện <img
+							src="./assets/img/icon/down-arrow.svg" /></a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="category-pk.html">Giày</a>
+						<a class="dropdown-item" href="category-pk.html">Mũ</a>
+						<a class="dropdown-item" href="category-pk.html">Túi</a>
+					</div>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="gallery.html">Bộ sưu tập<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container-cust checkout" style="margin-top: 70px; padding-left: 15px;">
+		<h2 style="font-size: 26px; text-transform:uppercase; font-weight:bold; margin-bottom: 70px;">Thanh toán</h2>
+		<div class="row">
+			<div class="col-4">
+				<div class="title-div">
+					<h4>TỔNG ĐƠN HÀNG</h4>
+				</div>
+				<div class="payment-body" style="width: 420px">
+					<div class="row cus-row payment-line">
+						<div class="col">3 Món đồ</div>
+						<div class="col" style="text-align: right;">1.800.000đ</div>
+					</div>
+					<div class="row cus-row payment-line">
+						<div class="col">Phí vận chuyển</div>
+						<div class="col" style="text-align: right;">Free</div>
+					</div>
+					<div class="row cus-row payment-line">
+						<div class="col">Thuế</div>
+						<div class="col" style="text-align: right;">-</div>
+					</div>
+					<div class="row cus-row payment-sum">
+						<div class="col">Tổng cộng</div>
+						<div class="col" style="text-align: right;">1.800.000đ</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-8" style="margin-left: -42px;">
+				<div class="stepwizard col-md-offset-5">
+					<div class="stepwizard-row setup-panel">
+						<div class="stepwizard-step">
+							<a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+							<p>Giao Hàng</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+							<p>Phương Thức Liên Lạc</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+							<p>Cách Thức Thanh Toán</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+							<p>Xác Nhận Đơn Hàng</p>
+						</div>
+					</div>
+				</div>
+				<form role="form" action="" method="post">
+					<div class="row setup-content" id="step-1">
+						<div class="col-md-12">
+							<p style="margin-bottom: 31px;">Bắt đầu bằng việc thêm địa chỉ của bạn</p>
+							<input type="text" placeholder="Điền địa chỉ tại đây" />
+							<input type="text" placeholder="Thành phố" />
+							<input type="text" placeholder="Quận" />
+							<input type="text" placeholder="Huyện/ Xã" style="margin-bottom: 50px;" />
+							<div class="btn-group">
+								<a href="cart.html">
+									<div class="btn-6">Quay Trở Lại</div>
+								</a>
+								<button class="btn-5 nextBtn pull-right" type="button">Tiếp Theo</button>
+							</div>
+						</div>
+					</div>
+					<div class="row setup-content setup-panel" id="step-2">
+						<div class="col-md-12">
+							<p style="margin-bottom: 31px;">Thêm phương thức liên lạc của bạn </p>
+							<input type="text" placeholder="Tên" />
+							<input type="text" placeholder="Họ " />
+							<input type="text" placeholder="Số điện thoại" />
+							<input type="text" placeholder="Địa chỉ Email" style="margin-bottom: 50px;" />
+							<div class="btn-group">
+									<div class="btn-6 prevBtn">Quay Trở Lại</div>
+								<button class="btn-5 nextBtn pull-right" type="button">Tiếp Theo</button>
+							</div>
+						</div>
+					</div>
+					<div class="row setup-content setup-panel" id="step-3">
+						<div class="col-md-12">
+							<p style="margin-bottom: 32px;">Thêm cách thức thanh toán của bạn</p>
+							<h6></h6>
+							<div class="btn-group" style="margin-bottom:26px; margin-top: 36px;">
+								<h5>TIỀN MẶT</h5>
+								<p>1.8000.000đ</p>
+							</div>
+							<h6 style="margin-bottom: 125px;"></h6>
+							<div class="btn-group">
+									<div class="btn-6 prevBtn">Quay Trở Lại</div>
+								<button class="btn-5 nextBtn pull-right" type="button">Tiếp Theo</button>
+							</div>
+						</div>
+					</div>
+					<div class="row setup-content" id="step-4">
+						<div class="col-md-12 info">
+							<p>Thông tin của bạn</p>
+							<p>Họ Tên: Nguyễn Văn A</p>
+							<p>Địa Chỉ: 80 Trúc Khê</p>
+							<p>Số Điện Thoại 123456789</p>
+							<p>Email : nguyenvana@gmail.com</p>
+							<div class="btn-group" style="margin-top: 169px;">
+								<div class="btn-6 prevBtn">Quay Trở Lại</div>
+								<a href="success.html"><div class="btn-6">Thanh toán</div></a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="cus-footer" style="margin-top:220px">
+			<div class="footer-top">
+				<div class="grid-container container-cust">
+					<div class="grid-item">
+						<h5>NELLY</h5>
+						<p>Áo</p>
+						<p>Quần</p>
+						<p>Phụ kiện</p>
+						<p>Bộ sưu tập</p>
+						<p>Sản phẩm nổi bật</p>
+					</div>
+					<div class="grid-item">
+						<h5>About NELLY</h5>
+						<p>Về chúng tôi</p>
+						<p>Chính sách đổi trả</p>
+						<p>Hệ thống cửa hàng</p>
+						<p>Tips & Tricks</p>
+					</div>
+					<div class="grid-item" style="border-right: 1px solid;">
+						<h5>More from NELLY</h5>
+						<h6>Mobile and NELLY Apps</h6>
+						<h6>NELLY Marketplace</h6>
+						<h6>Gift vouchers</h6>
+					</div>
+					<div class="grid-item grid-item1">
+						<div class="" style="display: inline-block; margin-left: 80px;">
+							<h6>THAM GIA BẢN TIN CỦA CHÚNG TÔI</h6>
+							<div class="input-group mb-3">
+								<input style="height: 32px;" type="text" class="form-control"
+									placeholder="Nhập địa chỉ email của bạn" aria-label="Recipient's username"
+									aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<button class="btn btn-secondary"
+										style="width: 124px; font-size: 14px; height: 32px;" type="button">Đăng
+										kí</button>
+								</div>
+							</div>
+						</div>
+						<ul class="nav" style="padding-top: 24px; padding-left: 90px;">
+							<li><img src="./assets/img/icon/facebook.png" alt=""></li>
+							<li><img src="./assets/img/icon/instagram.png" alt=""></li>
+							<li><img src="./assets/img/icon/twitter.png" alt=""></li>
+							<li><img src="./assets/img/icon/socal1.png" alt=""></li>
+							<li><img src="./assets/img/icon/paypal.png" alt=""></li>
+							<li><img src="./assets/img/icon/circle.png" alt=""></li>
+							<li><img src="./assets/img/icon/visa.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bot">
+				<div class="container-cust">
+					<h5 style="padding-left: 10px;">© NELLY 2019</h5>
+					<div class="f-right">
+						<h5>Privacy & Cookies</h5>
+						<h5 style="padding-left: 26px">Ts & Cs</h5>
+						<h5 style="padding-left: 60px">Accessibility</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./assets/lib/OwlCarousel/dist/owl.carousel.min.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/notifiy.js"></script>
+	<script>
+		$(document).ready(function () {
+			var navListItems = $('div.setup-panel div a'),
+				allWells = $('.setup-content'),
+				allNextBtn = $('.nextBtn');
+				allPrevBtn = $('.prevBtn');
+
+			allWells.hide();
+
+			navListItems.click(function (e) {
+				e.preventDefault();
+				var $target = $($(this).attr('href')),
+					$item = $(this);
+					
+				if (!$item.hasClass('disabled')) {
+					navListItems.removeClass('btn-primary').addClass('btn-default');
+					$item.addClass('btn-primary');
+					
+					allWells.hide();
+					$target.show();
+					$target.find('input:eq(0)').focus();
+				}
+			});
+
+			allNextBtn.click(function () {
+				var curStep = $(this).closest(".setup-content"),
+					curStepBtn = curStep.attr("id"),
+					nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+					curInputs = curStep.find("input[type='text'],input[type='url']"),
+					isValid = true;
+
+				$(".form-group").removeClass("has-error");
+				for (var i = 0; i < curInputs.length; i++) {
+					if (!curInputs[i].validity.valid) {
+						isValid = false;
+						$(curInputs[i]).closest(".form-group").addClass("has-error");
+					}
+				}
+
+				if (isValid)
+					nextStepWizard.removeAttr('disabled').trigger('click');
+			});
+
+			allPrevBtn.click(function () {
+				var curStep = $(this).closest(".setup-content"),
+					curStepBtn = curStep.attr("id"),
+					nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a"),
+					curInputs = curStep.find("input[type='text'],input[type='url']"),
+					isValid = true;
+
+				$(".form-group").removeClass("has-error");
+				for (var i = 0; i < curInputs.length; i++) {
+					if (!curInputs[i].validity.valid) {
+						isValid = false;
+						$(curInputs[i]).closest(".form-group").addClass("has-error");
+					}
+				}
+
+				if (isValid)
+					nextStepWizard.removeAttr('disabled').trigger('click');
+			});
+
+			$('div.setup-panel div a.btn-primary').trigger('click');
+		});
+	</script>
